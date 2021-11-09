@@ -6,7 +6,7 @@ const logger = winston.createLogger({
     transports: [
         new winston.transports.Console({format: winston.format.simple()})
     ],
-  });
+});
 const symDiff = (arrOne: number[], arrTwo: number[]): number[] => {
     const diff = arrOne.filter((num)=> !arrTwo.includes(num));
     diff.push(...arrTwo.filter((num)=> !arrOne.includes(num)));
