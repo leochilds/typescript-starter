@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "commonjs",
+    "baseUrl": "src",
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "inlineSourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "typeRoots": [
+      "node_modules/@types",
+      "src/types"
+    ],
+    "types": [
+      "node",
+      "jest"
+    ],
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
