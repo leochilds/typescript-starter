@@ -1,3 +1,12 @@
+import winston from 'winston';
+const logger = winston.createLogger({
+    level: 'info',
+    format: winston.format.json(),
+    defaultMeta: { service: 'user-service' },
+    transports: [
+        new winston.transports.Console({format: winston.format.simple()})
+    ],
+  });
 const symDiff = (arrOne: number[], arrTwo: number[]): number[] => {
     const diff = arrOne.filter((num)=> !arrTwo.includes(num));
     diff.push(...arrTwo.filter((num)=> !arrOne.includes(num)));
@@ -5,6 +14,7 @@ const symDiff = (arrOne: number[], arrTwo: number[]): number[] => {
 };
 
 export const sym = (...args: number[][]): number[] => {
+    logger.log({level: 'info', message:`Ran sym on ${JSON.stringify(args)}`});
     return args.reduce(symDiff).sort();
 };
 
