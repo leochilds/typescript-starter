@@ -9,7 +9,7 @@
     "build:fast": "tsc -p tsconfig.build.json --strict false --listEmittedFiles --skipLibCheck --incremental --tsBuildInfoFile ./.tsBuildInfo",
     "lint": "eslint -c .eslintrc.json --ext .ts --no-eslintrc src",
     "check": "npm run lint && npm run build:fast",
-    "watch": "onchange 'src/**/*.ts' 'src/*.ts' -e 'dist/*' 'tests/*' -- npm run check",
+    "watch": "onchange \"src/**/*.ts\" \"src/*.ts\" -e \"dist/*\" \"tests/*\" -- npm run check",
     "test": "jest"
   },
   "repository": {
