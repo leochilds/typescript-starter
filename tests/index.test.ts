@@ -1,8 +1,8 @@
 import {sym} from '../src/index';
 
 
-describe('Find the Symmetric Difference', ()=>{
-    it('sym([1, 2, 3], [5, 2, 1, 4]) should return [3, 4, 5]', ()=>{
+describe('Find the Symmetric Difference', () => {
+    it('sym([1, 2, 3], [5, 2, 1, 4]) should return [3, 4, 5]', () => {
         expect(sym([1, 2, 3], [5, 2, 1, 4])).toStrictEqual([3, 4, 5]);
     });
     it('sym([1, 2, 3], [5, 2, 1, 4]) should contain only three elements.', () => {
