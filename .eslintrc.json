@@ -4,7 +4,10 @@
         "es2021": true
     },
     "extends": [
-        "google"
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin: node/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -12,14 +15,34 @@
         "sourceType": "module"
     },
     "plugins": [
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "node"
     ],
     "rules": {
         "no-console": "off",
-        "max-len": "off",
-        "indent": "off",
-        "@typescript-eslint/indent": [
-            "error"
+        "semi": [
+            "warn",
+            "always"
+        ],
+        "quotes": [
+            "warn",
+            "single"
+        ],
+        "block-scoped-var": "warn",
+        "eqeqeq": "warn",
+        "no-var": "warn",
+        "prefer-const": "warn",
+        "eol-last": "warn",
+        "prefer-arrow-callback": "warn",
+        "no-trailing-spaces": "warn",
+        "node/no-missing-import": "off",
+        "node/no-unpublished-import": [
+            "error",
+            {
+                "allowModules": [
+                    "aws-sdk"
+                ]
+            }
         ]
     }
 }
