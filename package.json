@@ -11,7 +11,7 @@
     "check": "npm run lint && npm run build:fast",
     "watch": "onchange \"src/**/*.ts\" \"src/*.ts\" -e \"dist/*\" \"tests/*\" -- npm run check",
     "test": "jest",
-    "dev": "ts-node-dev --respawn src/index.ts"
+    "dev": "ts-node-dev --respawn src/index.ts",
     "format": "prettier --write ."
   },
   "repository": {
