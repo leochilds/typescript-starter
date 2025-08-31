@@ -15,3 +15,8 @@ It installs Node.js 22 via the devcontainer `node` feature before running `npm i
 
 This project targets the latest Node.js LTS release. Ensure your environment uses **Node.js 22.x**.
 
+
+## Scripts
+
+- `npm run dev` - Runs `src/index.ts` using ts-node-dev, automatically restarting on file changes.
+
