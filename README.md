@@ -1,17 +1,49 @@
 # typescript-starter
-This is my typescript starter template that includes jest for testing, eslint for linting, winston for logging and has some helpful scripts for dev.
 
-## Development Container
-
-This project includes a [Dev Container](https://containers.dev/) configuration for VS Code. With the Dev Containers extension installed, you can open the repository in a containerized environment with all dependencies pre-installed:
-
-1. Install Docker and the Dev Containers extension.
-2. Open the command palette and select **Dev Containers: Open Folder in Container...**.
-
-The container uses the `mcr.microsoft.com/devcontainers/base:0-ubuntu-22.04` image.
-It installs Node.js 22 via the devcontainer `node` feature before running `npm install`.
+TypeScript starter template with Jest for testing, ESLint for linting, and Winston for logging.
 
 ## Prerequisites
 
 This project targets the latest Node.js LTS release. Ensure your environment uses **Node.js 22.x**.
+
+## Running in a Dev Container
+
+1. Install Docker and the VS Code **Dev Containers** extension.
+2. Open the command palette and select **Dev Containers: Open Folder in Container...**.
+3. VS Code builds the container from `.devcontainer/devcontainer.json` and runs `npm install` automatically.
+
+## Running Locally
+
+1. Install dependencies: `npm install`.
+2. Use the npm scripts below to develop, test, and build the project.
+
+## npm Scripts
+
+| Script | Description |
+| --- | --- |
+| `npm run dev` | Runs `watch` to rebuild and lint on file changes. |
+| `npm start` | Executes the compiled code from `dist/`. |
+| `npm run build` | Compiles TypeScript using `tsconfig.build.json`. |
+| `npm run build:fast` | Faster, less strict build for development. |
+| `npm test` | Runs the Jest test suite. |
+| `npm run lint` | Lints the `src/` directory without making changes. |
+| `npm run format` | Applies ESLint fixes to the `src/` directory. |
+| `npm run check` | Runs `lint` and `build:fast`. |
+| `npm run watch` | Runs `check` whenever source files change. |
+
+## Environment Variables
+
+No environment variables are required by default. You can supply your own variables via the shell or a `.env` file and access them with `process.env`.
+
+## Commit Conventions
+
+This repository follows [Conventional Commits](https://www.conventionalcommits.org/). Examples: `feat: add feature` or `fix: resolve issue`.
+
+## Continuous Integration
+
+GitHub Actions runs lint and test jobs on each push and pull request to ensure the project builds and tests pass.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for how to get involved.
 
