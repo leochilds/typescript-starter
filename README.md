@@ -47,3 +47,11 @@ GitHub Actions runs lint and test jobs on each push and pull request to ensure t
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for how to get involved.
 
+## EditorConfig
+
+This project includes an `.editorconfig` file to enforce consistent coding styles.
+Install an EditorConfig plugin for your editor to automatically apply these settings.
+
+## Scripts
+
+- `npm run dev` - Runs `src/index.ts` using ts-node-dev, automatically restarting on file changes.
