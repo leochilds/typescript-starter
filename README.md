@@ -15,6 +15,23 @@ It installs Node.js 22 via the devcontainer `node` feature before running `npm i
 
 This project targets the latest Node.js LTS release. Ensure your environment uses **Node.js 22.x**.
 
+## Configuration
+
+Environment variables are managed with [dotenv](https://www.npmjs.com/package/dotenv).
+Create a `.env` file by copying `.env.example` and updating the values as needed:
+
+```bash
+cp .env.example .env
+```
+
+Load and validate these variables in code through `src/config.ts`:
+
+```ts
+import config from './config';
+
+console.log(`Running in ${config.nodeEnv} mode on port ${config.port}`);
+```
+
 ## EditorConfig
 
 This project includes an `.editorconfig` file to enforce consistent coding styles.
