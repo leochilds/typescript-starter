@@ -13,5 +13,5 @@ It installs Node.js 22 via the devcontainer `node` feature before running `npm i
 
 ## Prerequisites
 
-This project targets the latest Node.js LTS release. Ensure your environment uses **Node.js 22.19.0 or newer**.
+This project targets the latest Node.js LTS release. Ensure your environment uses **Node.js 22.x**.
 
