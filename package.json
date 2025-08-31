@@ -13,7 +13,8 @@
     "test": "jest",
     "prepare": "husky",
     "dev": "ts-node-dev --respawn src/index.ts",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "commit": "cz"
   },
   "repository": {
     "type": "git",
@@ -33,10 +34,14 @@
     "node": ">=22.0.0 <23"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.18.0",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.57.1",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^10.1.8",
@@ -59,5 +64,10 @@
       "npm run lint",
       "npm test -- --findRelatedTests --passWithNoTests"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }
