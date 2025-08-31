@@ -1,13 +1,16 @@
 import logger from './utils/logger';
-const symDiff = (arrOne: number[], arrTwo: number[]): number[] => {
-    const diff = arrOne.filter((num)=> !arrTwo.includes(num));
-    diff.push(...arrTwo.filter((num)=> !arrOne.includes(num)));
-    return [...new Set(diff)];
+
+const symmetricDifference = (arrA: number[], arrB: number[]): number[] => {
+  const setA = new Set(arrA);
+  const setB = new Set(arrB);
+  const diff = [
+    ...arrA.filter((num) => !setB.has(num)),
+    ...arrB.filter((num) => !setA.has(num)),
+  ];
+  return [...new Set(diff)];
 };
 
-export const sym = (...args: number[][]): number[] => {
-    logger.log({level: 'info', message:`Ran sym on ${JSON.stringify(args)}`});
-    return args.reduce(symDiff).sort();
+export const sym = (...arrays: number[][]): number[] => {
+  logger.info(`Ran sym on ${JSON.stringify(arrays)}`);
+  return arrays.reduce(symmetricDifference).sort((a, b) => a - b);
 };
-
-console.info(sym([1, 2, 3], [5, 2, 1, 4]));

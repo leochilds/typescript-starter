@@ -5,11 +5,10 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "node dist/index.js",
-    "dev": "npm run watch",
     "build": "tsc -p tsconfig.build.json",
     "build:fast": "tsc -p tsconfig.build.json --strict false --listEmittedFiles --skipLibCheck --incremental --tsBuildInfoFile ./.tsBuildInfo",
-    "lint": "eslint -c .eslintrc.json --ext .ts src",
-    "lint:fix": "eslint -c .eslintrc.json --ext .ts src --fix",
+    "lint": "ESLINT_USE_FLAT_CONFIG=false eslint -c .eslintrc.cjs --ext .ts src",
+    "lint:fix": "ESLINT_USE_FLAT_CONFIG=false eslint -c .eslintrc.cjs --ext .ts src --fix",
     "check": "npm run lint && npm run build:fast",
     "watch": "onchange \"src/**/*.ts\" \"src/*.ts\" -e \"dist/*\" \"tests/*\" -- npm run check",
     "test": "jest",
