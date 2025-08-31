@@ -47,6 +47,23 @@ GitHub Actions runs lint and test jobs on each push and pull request to ensure t
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for how to get involved.
 
+## Configuration
+
+Environment variables are managed with [dotenv](https://www.npmjs.com/package/dotenv).
+Create a `.env` file by copying `.env.example` and updating the values as needed:
+
+```bash
+cp .env.example .env
+```
+
+Load and validate these variables in code through `src/config.ts`:
+
+```ts
+import config from './config';
+
+console.log(`Running in ${config.nodeEnv} mode on port ${config.port}`);
+```
+
 ## EditorConfig
 
 This project includes an `.editorconfig` file to enforce consistent coding styles.
