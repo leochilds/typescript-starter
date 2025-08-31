@@ -15,8 +15,11 @@ It installs Node.js 22 via the devcontainer `node` feature before running `npm i
 
 This project targets the latest Node.js LTS release. Ensure your environment uses **Node.js 22.x**.
 
+## EditorConfig
+
+This project includes an `.editorconfig` file to enforce consistent coding styles.
+Install an EditorConfig plugin for your editor to automatically apply these settings.
 
 ## Scripts
 
 - `npm run dev` - Runs `src/index.ts` using ts-node-dev, automatically restarting on file changes.
-
