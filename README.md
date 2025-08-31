@@ -32,3 +32,11 @@ import config from './config';
 console.log(`Running in ${config.nodeEnv} mode on port ${config.port}`);
 ```
 
+## EditorConfig
+
+This project includes an `.editorconfig` file to enforce consistent coding styles.
+Install an EditorConfig plugin for your editor to automatically apply these settings.
+
+## Scripts
+
+- `npm run dev` - Runs `src/index.ts` using ts-node-dev, automatically restarting on file changes.
