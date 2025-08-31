@@ -8,5 +8,9 @@ This project includes a [Dev Container](https://containers.dev/) configuration f
 1. Install Docker and the Dev Containers extension.
 2. Open the command palette and select **Dev Containers: Open Folder in Container...**.
 
-The container uses the `mcr.microsoft.com/devcontainers/typescript-node:0-20` image and runs `npm install` after creation.
+The container uses the `mcr.microsoft.com/devcontainers/typescript-node:0-22` image and runs `npm install` after creation.
+
+## Prerequisites
+
+This project targets the latest Node.js LTS release. Ensure your environment uses **Node.js 22.19.0 or newer**.
 
