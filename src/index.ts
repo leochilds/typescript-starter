@@ -1,12 +1,4 @@
-import winston from 'winston';
-const logger = winston.createLogger({
-    level: 'info',
-    format: winston.format.json(),
-    defaultMeta: { service: 'user-service' },
-    transports: [
-        new winston.transports.Console({format: winston.format.simple()})
-    ],
-});
+import logger from './utils/logger';
 const symDiff = (arrOne: number[], arrTwo: number[]): number[] => {
     const diff = arrOne.filter((num)=> !arrTwo.includes(num));
     diff.push(...arrTwo.filter((num)=> !arrOne.includes(num)));
