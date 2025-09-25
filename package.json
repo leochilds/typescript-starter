@@ -58,7 +58,7 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
-    "dotenv": "^17.2.1",
+    "dotenv": "^17.2.2",
     "winston": "^3.17.0"
   },
   "lint-staged": {
